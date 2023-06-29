@@ -1,7 +1,7 @@
 <?php
 
 require 'config.php';
-$sandro = getConn($host, $db_name, $user, $password); 
+//$sandro = getConn($host, $db_name, $user, $password); 
 $conn = getConn($host, $db_name, $user, $password);
 
 if ($sandro) {
