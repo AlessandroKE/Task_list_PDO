@@ -4,9 +4,8 @@
 
 require('includes/config.php');
 
-$title = "PHP Server";
-$body = "A PHP server is a computer or software that runs PHP scripts, processes them, and generates HTML responses to be sent to clients. It interprets PHP code, accesses databases, handles HTTP requests, and delivers dynamic web content. It provides the necessary environment to execute PHP applications, making them accessible over the web and enabling the creation of interactive and data-driven websites and web applications.";
-
+$title = "PHP Server_2023";
+$body = "Alessandro is a computer Guru";
 $conn = getConn($host, $db_name, $user, $password);
 
 // Query statement
