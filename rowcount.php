@@ -18,6 +18,8 @@ if($stmt->execute()){
 }
     else{
 
+        echo "No results yet";
+
     }
 }
 
