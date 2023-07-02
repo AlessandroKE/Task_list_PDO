@@ -5,6 +5,10 @@ $conn = getConn($host, $db_name, $user, $password);
 if($conn){
 
     try{
+        if(isset($_POST['submit'])){
+
+            $task = $_POST['mytask'];
+            $status = $_POST['status'];
 
         // Validating the input. 
             if(!empty($task) && !empty($status)){
@@ -21,19 +25,12 @@ if($conn){
                 }
 
             } else {
-                echo "Please enter both task and status";
+                echo "Please input both task and status";
             }
-
+        
+        }
         } catch(Exception $e) {
 
         echo "An error occurred". '<br>'. $e->getMessage();
-
-
-
-
-    }catch(Exception $e){
-
-        echo "An error occurred". '<br>'. $e->getMessage();
-
-    }
+}
 }
