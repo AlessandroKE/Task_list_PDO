@@ -6,26 +6,30 @@ if($conn){
 
     try{
 
-        if(isset($_POST['submit'])){
+        // Validating the input. 
+            if(!empty($task) && !empty($status)){
 
-            $task = $_POST['mytask'];
-            $status = $_POST['status'];
-            
-            $sql = "INSERT INTO todos (title, status) VALUES (:title, :status)";
+                $sql = "INSERT INTO todos (title, status) VALUES (:title, :status)";
+                $stmt = $conn->prepare($sql);
+                $stmt->bindParam(':title', $task);
+                $stmt->bindParam(':status', $status);
+
+                if ($stmt->execute()){
+                    echo "Data inserted successfully";
+                } else {
+                    die("An error occurred");
+                }
+
+            } else {
+                echo "Please enter both task and status";
+            }
+
+        } catch(Exception $e) {
+
+        echo "An error occurred". '<br>'. $e->getMessage();
 
 
-    $stmt = $conn->prepare($sql);
-    $stmt->bindParam(':title', $task);
-    $stmt->bindParam(':status', $status);
 
-    if ($stmt->execute()){
-    echo "Data inserted successfully";
-    }else{
-    die("An error occurred");
-    }
-
-
-        }
 
     }catch(Exception $e){
 
