@@ -20,6 +20,7 @@ if($conn){
 
                 if ($stmt->execute()){
                     echo "Data inserted successfully";
+                    header("location:tasks.php");
                 } else {
                     die("An error occurred");
                 }
