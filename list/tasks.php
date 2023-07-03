@@ -41,7 +41,8 @@ if($conn){
                         <td><?php echo $task['title']; ?></td>
                         <td><?php echo $task['status']; ?></td>
                         <td><?php echo $task['created_at']; ?></td>
-                        <td> <button type="submit" class="btn btn-primary" name = "submit">Delete</button></td>
+                        <td> <button type="submit" class="btn btn-primary" name = "submit"><a href="delete.php?id=<?php echo $task['id']; ?>" class="btn btn-primary">Delete</a></button></td>
+                        <td> <button type="submit" class="btn btn-primary" name = "submit"><a href="update.php?id=<?php echo $task['id']; ?>" class="btn btn-primary">update</a></button></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
