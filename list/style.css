@@ -98,6 +98,37 @@ h1 {
     color: #666;
 }
 
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.select-wrapper::after {
+    content: '\25BE';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #666;
+}
+
+.select-wrapper select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+    color: #333;
+}
+
+.select-wrapper select:focus {
+    outline: none;
+}
+
 .btn {
     padding: 0.5rem 1rem;
     border: none;
