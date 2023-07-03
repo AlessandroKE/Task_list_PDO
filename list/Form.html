@@ -1,38 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To Do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h4 class="text-center my-3 pb-3">To Do App</h4>
 
-<section class="vh-100" style="background-color: #eee;">
-  <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col col-lg-9 col-xl-7">
-        <div class="card rounded-3">
-          <div class="card-body p-4">
-
-            <h4 class="text-center my-3 pb-3">To Do App</h4>
-
-            <form method = "POST" action = index.php class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2" >
-              <div class="col-12">
-                <div class="form-outline">
-                  <input name = "mytask"  type="text" id="form1" class="form-control" />
-                  <label class="form-label" for="form1">Enter a task here</label>
-                </div>
-                <div class="form-outline">
-                  <input name = "status"  type="text" id="form1" class="form-control" />
-                  <label class="form-label" for="form1">Task status</label>
-                </div>
-
-              </div>
-
-              <div class="col-12">
-                <button type="submit" class="btn btn-primary" name = "submit" >Save</button>
-              </div>
-            </form>
-
-            <button type="submit" class="btn btn-primary" name="submit">
-              <a href="tasks.php" style="text-decoration: none; color: inherit;">TASKS AVAILABLE</a>
-            </button>
-            
-          </div>
+    <form method="POST" action="index.php" class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2">
+        <div class="form-outline col-12">
+            <input name="mytask" type="text" id="form1" class="form-control" />
+            <label class="form-label" for="form1">Enter a task here</label>
         </div>
+        <div class="form-outline col-12">
+          <select name="status" id="form2" class="form-select">
+              <option value="" selected disabled>Choose task status</option>
+              <option value="pending">Pending</option>
+              <option value="in-progress">In Progress</option>
+              <option value="completed">Completed</option>
+          </select>
+          <label class="form-label" for="form2">Task status</label>
       </div>
-    </div>
-  </div>
-</section>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary" name="submit">Save</button>
+        </div>
+    </form>
+
+    <button class="btn btn-primary" name="submit">
+        <a href="tasks.php">TASKS AVAILABLE</a>
+    </button>
+</body>
+</html>
